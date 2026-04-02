@@ -8,9 +8,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 import java.time.Month;
 
-@Document(collection = "transactions")
+@Document(collection = "Budgets")
 @Data
-public class Transaction {
+public class Budget {
     @Id
     private String id;
 
@@ -21,7 +21,7 @@ public class Transaction {
 
     @NotNull(message = "Amount is required")
     @Positive(message = "Amount must be greater than zero")
-    private double amount;
+    private double limit;
 
     @NotNull(message = "Month is required")
     private Month month;
